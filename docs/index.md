@@ -13,12 +13,17 @@
 ## ピン配列
 ![](https://media.githubusercontent.com/media/kototoibashi/corolla-add-hud/master/img/hud-connector-pinout.jpg)
 
-IG,B,ESは電源だろう。  
+| ピン番号 | 色 | ピン名 | 接続先 |  |
+| -- | -- | -- | -- | -- |
+| 1 | 紫`V` | IG | I102 Junction Connector | イグニッション電源 |
+| 2 | スカイブルー`SB` | B | I98 No.8 Junction Connector | バッテリー電源 |
+| 4 | 白・黒`W-B` | ES | I101 No.11 Junction Connector | アース |
+| 12 | ライトグリーン`LG` | MPX1 | I94 No.3 CAN Junction Connector - pin3 | CAN通信(High) |
+| 13 | 白`W` | MPX2 | I94 No.3 CAN Junction Connector - pin13 | CAN通信(Low) | 
+| 14 | 黒`B` | TX+ | I108 No.2 Junction Connector - pin2 | ディスプレイオーディオ CNH1 |
+| 14 | 黄`Y` | TX- | I108 No.2 Junction Connector - pin13 | ディスプレイオーディオ CNL1 | 
 
-`MPX1`,`MPX2`は、「ボデー多重通信システム Body Electrical MPX (Multiplex Communication System)」のことか？  
-トヨタMPXはデイジーチェーン接続で複数のコンピューターを繋ぐ方式？  
 
-`TX+`,`TX-`の意味とは？(CAN通信？)  
 
 ## 事前調査
 実際の車のインパネをバラしてみたが、HUDに繋がりそうな空きコネクタは見つからなかった。ハーネスの自作が必要だろう。  
@@ -36,7 +41,9 @@ IG,B,ESは電源だろう。
 # 参考になりそうなページ
 * [https://minkara.carview.co.jp/userid/2122549/car/2834247/5489693/note.aspx](https://minkara.carview.co.jp/userid/2122549/car/2834247/5489693/note.aspx)
 
-# 購入したHUDモジュール
+
+# 補足
+## 購入したHUDモジュール
 
 * UPJ.parts　にて購入　
 * 商品価格6820円+送料1200円
@@ -79,3 +86,29 @@ ABSの有無   ： 有り
 車両備考    ： 
 ```
  
+## カローラスポーツのCANバスの対応
+
+### CAN1 / CANX
+* ミリ波レーダー
+* 前方認識カメラ
+* ブラインドスポットモニターセンサ・左右
+### CAN2
+* ブレーキアクチュエータ
+* 乗員検知
+* エアバッグセンサ
+* ステアリングセンサ
+* パワーステアリング
+### CAN3 / CANY
+* ラジオ・カーナビ・ディスプレイオーディオ
+* 電話トランシーバ (DCMのことか？)
+### CAN4
+* ECM(エンジンコントロール)
+* トランスミッションコントロールECU
+### CAN5
+* コンビネーションメーター
+* メーターミラー(HUD)
+* エアコンアンプ
+* ヘッドライトユニット・左右
+* メインボディーECU
+### CAN6
+* DataLincConnector3 (OBD2)
