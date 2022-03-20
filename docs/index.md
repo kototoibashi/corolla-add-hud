@@ -1,3 +1,15 @@
+<div style="border:#008855 1px solid;border-radius:20px;padding:1em;">
+詳細な情報は下記のリンクを読んでください。
+<ol>
+<li><a href="https://kuriuzublog.wordpress.com/2021/09/20/corolla-hud-1/">動作確認編</a></li>
+<li><a href="https://kuriuzublog.wordpress.com/2021/09/24/corolla-hud-2/">配線編</a></li>
+<li><a href="https://kuriuzublog.wordpress.com/2022/01/27/corolla-sport-hud-3/">取付編</a></li>
+</ol>
+
+</div>
+
+**以下の文書は、下書きです。**
+
 # はじめに
 カローラスポーツHV (ZWE213H)のGグレードに純正HUDを後付けしたい！    
 とりあえず中古でHUDモジュールだけ買ってきた。どうやって取り付ければいいか今調べている。  
